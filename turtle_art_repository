@@ -1,0 +1,40 @@
+# Rebecca Pedraza
+# Nov 26
+# Turtle art
+
+import turtle
+import random
+
+# Two names for two different turtles 
+sam = turtle.Turtle()
+sammy = turtle.Turtle()
+
+# Function to draw a square spiral
+def square_spiral(turtle):
+    turtle.penup()
+    turtle.setposition(0,0) # Assign startpoint to turtle
+    turtle.pendown()
+    for i in range(30): # Loop for turtle to move and turn 
+        turtle.forward(i * 10)
+        turtle.left(90)
+        
+# Function to draw a figure with different parameters 
+def random_figure():
+    turtle.penup()
+    turtle.setposition(random.randint(-150,150)), random.randint(-150,150)) # Assign startpoint to turtle
+    turtle.pendown()
+    turtle.pencolor(random.choice(["orange","blue","red","purple"]))
+# Draw the random figure with different parameters 
+sides = random.randint(2,6)
+angle = 360 / sides
+for i in range(sides):
+    turtle.forward(size)
+    turtle.left(angle)
+
+# Function to call sam and sammy with random figures
+random_figure(sam, 150)
+random_figure(sammy, 100)
+
+# Function to call the square spiral
+square_spiral(sam)
+square_spiral(sammy)
